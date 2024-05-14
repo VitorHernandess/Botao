@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#particles-js{
+    background: rgb(8, 1, 33);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+button{
+    margin-top: 400px;
+    --glow-color:rgb(217,176,255);
+    --glow-spred-color:rgba(191, 123, 255, 0.781);
+    --enhaced-glow-color:rgb(231, 206, 255);
+    --btn-color:rgb(100, 61, 136);
+
+    border: .25cm solid var(--glow-color);
+    padding: 1cm 3cm;
+    color:var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 .25em var(--glow-color),
+                0 0 4em 1em var(--glow-spred-color),
+                inset 0 0 0.75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+
+}
+button::after{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    background-color: var(--glow-spred-color);
+    fill: blur(2cm);
+    opacity: .7;
+}
+
+button:hover{
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+                0 0 4em 2em var(--glow-spred-color),
+                inset 0 0 .75em .25em var(--glow-color);
+}
+
+button:active{
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+                0 0 2.5em 2em var(--glow-spred-color),
+                inset 0 0 .5em .25em var(--glow-color);
+}
+
+
+
+
+
+
+
+
+
+
+
